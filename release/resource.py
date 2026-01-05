@@ -10,10 +10,10 @@ def get_db_path():
         base_dir = os.path.dirname(sys.executable)
         local_db = os.path.join(base_dir, "coffee.db")
         if not os.path.exists(local_db):
-            bundled_db = resource_path("data/coffee.db")
+            bundled_db = resource_path("../data/coffee.db")
             shutil.copyfile(bundled_db, local_db)
         return local_db
     else:
-        return resource_path("data/coffee.db")
+        return resource_path("../data/coffee.db")
 
 DB_PATH = get_db_path()

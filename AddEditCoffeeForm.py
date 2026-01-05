@@ -2,7 +2,7 @@ import sqlite3
 from PyQt6.QtWidgets import QMainWindow
 
 from AddEditCoffee import Ui_AddEditCoffeeForm
-from resource import DB_PATH
+from release.resource import DB_PATH
 
 
 class AddEditCoffeeForm(QMainWindow, Ui_AddEditCoffeeForm):

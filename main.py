@@ -3,7 +3,7 @@ import sys
 from PyQt6.QtWidgets import QApplication, QMainWindow, QTableWidgetItem
 from AddEditCoffeeForm import AddEditCoffeeForm
 from main_ui import Ui_MainWindow
-from resource import DB_PATH
+from release.resource import DB_PATH
 
 
 class MainWindow(QMainWindow, Ui_MainWindow):
