@@ -7,25 +7,25 @@
     <x>0</x>
     <y>0</y>
     <width>900</width>
-    <height>400</height>
+    <height>450</height>
    </rect>
   </property>
 
   <widget class="QWidget" name="centralwidget">
+
+   <!-- Таблица -->
    <widget class="QTableWidget" name="coffeeTable">
     <property name="geometry">
      <rect>
       <x>10</x>
       <y>10</y>
       <width>880</width>
-      <height>380</height>
+      <height>350</height>
      </rect>
     </property>
-
     <property name="columnCount">
      <number>7</number>
     </property>
-
     <property name="rowCount">
      <number>0</number>
     </property>
@@ -67,6 +67,37 @@
     </column>
 
    </widget>
+
+   <!-- Кнопка Добавить -->
+   <widget class="QPushButton" name="addButton">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>380</y>
+      <width>120</width>
+      <height>30</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Добавить</string>
+    </property>
+   </widget>
+
+   <!-- Кнопка Изменить -->
+   <widget class="QPushButton" name="editButton">
+    <property name="geometry">
+     <rect>
+      <x>150</x>
+      <y>380</y>
+      <width>120</width>
+      <height>30</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Изменить</string>
+    </property>
+   </widget>
+
   </widget>
 
   <widget class="QMenuBar" name="menubar"/>
