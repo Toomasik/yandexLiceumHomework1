@@ -1,12 +1,14 @@
 import sqlite3
 from PyQt6.QtWidgets import QMainWindow
-from PyQt6 import uic
+
+from AddEditCoffee import Ui_AddEditCoffeeForm
+from resource import DB_PATH
 
 
-class AddEditCoffeeForm(QMainWindow):
+class AddEditCoffeeForm(QMainWindow, Ui_AddEditCoffeeForm):
     def __init__(self, coffee_id=None):
         super().__init__()
-        uic.loadUi("addEditCoffeeForm.ui", self)
+        self.setupUi(self)
         self.coffee_id = coffee_id
 
         if coffee_id is not None:
@@ -15,7 +17,7 @@ class AddEditCoffeeForm(QMainWindow):
         self.saveButton.clicked.connect(self.save_data)
 
     def load_data(self):
-        con = sqlite3.connect("coffee.db")
+        con = sqlite3.connect(DB_PATH)
         cur = con.cursor()
         data = cur.execute(
             "SELECT name, roast_level, form, taste_desc, price, package_size "
@@ -40,7 +42,7 @@ class AddEditCoffeeForm(QMainWindow):
             self.packageEdit.text()
         )
 
-        con = sqlite3.connect("coffee.db")
+        con = sqlite3.connect(DB_PATH)
         cur = con.cursor()
 
         if self.coffee_id is None:
